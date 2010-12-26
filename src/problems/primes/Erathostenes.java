@@ -60,6 +60,8 @@ public class Erathostenes
 
   private void fill()
   {
+    set(0,true);
+    set(1,true);
     //long sum=0;
     //long product=1;
     int index=2;

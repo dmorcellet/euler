@@ -1,6 +1,7 @@
 package problems;
 
 /**
+ * Solved 28.12.2010.
  * @author DAM
  */
 public class MainP38

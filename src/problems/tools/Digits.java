@@ -22,4 +22,26 @@ public class Digits
     }
     return 12;
   }
+
+  /**
+   * Indicates if the given number is pandigital.
+   * @param n Number to test.
+   * @return <code>true</code> if it is, <code>false</code> otherwise.
+   */
+  public static boolean isPandigital(int n)
+  {
+    int nbDigits=nbDigitsBase10(n);
+    boolean[] digits=new boolean[nbDigits];
+    for(int i=0;i<nbDigits;i++) digits[i]=false;
+    while (n>0)
+    {
+      int digit=n%10;
+      if (digit==0) return false;
+      if (digit>nbDigits) return false;
+      if (digits[digit-1]) return false;
+      digits[digit-1]=true;
+      n/=10;
+    }
+    return true;
+  }
 }

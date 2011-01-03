@@ -1,32 +1,52 @@
 package problems;
 
 /**
- * Solved 19.12.2010.
+ * Solved 03.01.2011.
  * @author DAM
  */
 public class MainP48
 {
+  private static final long MAX=10000000000L; 
   private MainP48()
   {
     // Nothing to do !
   }
 
-  private int[] limitedLengthMultiplication(int[] n1, int[] n2, int length)
+  private long limitedLengthMultiplication(long n1, long n2)
   {
-    return null;
+    long r=n1*n2;
+    r=r%MAX;
+    return r;
   }
 
-  private int[] computeDigits(int n)
+  private long limitedLengthPower(int n1, int n2)
   {
-    // compute the last 10 digits of n^n
-    return null;
+    long r=n1;
+    for(int i=2;i<=n2;i++)
+    {
+      r=limitedLengthMultiplication(r,n1);
+    }
+    return r;
+  }
+
+  private long limitedLengthSum(long n1, long n2)
+  {
+    long r=n1+n2;
+    r=r%MAX;
+    return r;
   }
 
   private void doIt()
   {
     long now=System.currentTimeMillis();
+    long r=0;
+    for(int i=1;i<=1000;i++)
+    {
+      long item=limitedLengthPower(i,i);
+      r=limitedLengthSum(r,item);
+    }
     long now2=System.currentTimeMillis();
-    System.out.println("result="+" ("+(now2-now)+"ms).");
+    System.out.println("result="+r+" ("+(now2-now)+"ms).");
   }
 
   /**

@@ -43,9 +43,18 @@ public class Erathostenes
 
   private boolean get(int index)
   {
-    int row=index/_rowSize;
-    int column=index%_rowSize;
-    return _flags[row][column];
+    try
+    {
+      int row=index/_rowSize;
+      int column=index%_rowSize;
+      return _flags[row][column];
+    }
+    catch(Exception e)
+    {
+      System.out.println("Got error for index="+index);
+      e.printStackTrace();
+      return false;
+    }
   }
 
   private void setMultiples(int value)

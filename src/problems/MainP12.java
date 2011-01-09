@@ -1,6 +1,7 @@
 package problems;
 
 import problems.primes.PrimeTester;
+import problems.primes.SqrtPrimeTester;
 
 /**
  * @author DAM
@@ -11,7 +12,13 @@ public class MainP12
   private final int NB_PRIMES=PRIMES.length;
   private final int NB=100;
   private int[][] _decs=new int[NB][];
+  private PrimeTester _primeTester;
   
+  private MainP12()
+  {
+    _primeTester=new SqrtPrimeTester();
+  }
+
   private void computeDecomposition(int n)
   {
     _decs[n]=new int[NB_PRIMES];
@@ -63,7 +70,7 @@ public class MainP12
     int square=(int)Math.floor(Math.sqrt(n));
     while ((tmp>1) && (i<=square))
     {
-      if (PrimeTester.isPrime(i))
+      if (_primeTester.isPrime(i))
       {
         int nbTimes=0;
         while (tmp%i==0)

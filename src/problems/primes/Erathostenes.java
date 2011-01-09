@@ -1,9 +1,10 @@
 package problems.primes;
 
 /**
- * @author dm
+ * Prime tester based on a Erathostenes sieve.
+ * @author DAM
  */
-public class Erathostenes
+public class Erathostenes implements PrimeTester
 {
   private boolean[][] _flags;
   
@@ -11,11 +12,20 @@ public class Erathostenes
   private int _rowSize;
   private int _maxInt;
 
+  /**
+   * Constructor.
+   * @param maxInt Sieve's limit.
+   */
   public Erathostenes(int maxInt)
   {
     this(maxInt,SIZE);
   }
 
+  /**
+   * Constructor.
+   * @param maxInt Sieve's limit.
+   * @param rowSize Size of rows used for storage.
+   */
   public Erathostenes(int maxInt, int rowSize)
   {
     int nbRows=(maxInt/rowSize)+(((maxInt%rowSize)>0)?1:0);
@@ -36,9 +46,15 @@ public class Erathostenes
     _flags[row][column]=value;
   }
 
-  public boolean isPrime(int n)
+  /**
+   * Test if n is prime or not.
+   * @param n Number to test.
+   * @return <code>true</code> if it is prime, <code>false</code> if it is not.
+   * @throws IllegalArgumentException if n is not supported.
+   */
+  public boolean isPrime(long n)
   {
-    return !get(n);
+    return !get((int)n);
   }
 
   private boolean get(int index)
@@ -51,9 +67,7 @@ public class Erathostenes
     }
     catch(Exception e)
     {
-      System.out.println("Got error for index="+index);
-      e.printStackTrace();
-      return false;
+      throw new IllegalArgumentException("n="+index);
     }
   }
 
@@ -71,29 +85,14 @@ public class Erathostenes
   {
     set(0,true);
     set(1,true);
-    //long sum=0;
-    //long product=1;
     int index=2;
-    //int nbPrimes=0;
     while (index<_maxInt)
     {
       if (!get(index))
       {
-        //sum+=index;
-        //product*=index;
-        //nbPrimes++;
-        //System.out.println("Found prime #"+nbPrimes+" = "+index+", sum="+sum+", product="+product);
         setMultiples(index);
       }
       index++;
     }
-    //System.out.println("Sum = "+sum);
-    /*
-    for(int i=1;i<_maxInt;i++)
-    {
-      if (!get(i)) { System.out.print(' '+String.valueOf(i)); }
-    }
-    System.out.println("");
-    */
   }
 }

@@ -28,7 +28,7 @@ public class Digits
    * @param n Number to test.
    * @return Number of digits.
    */
-  public static long nbDigitsBase10(long n)
+  public static int nbDigitsBase10(long n)
   {
     if (n==0) return 1;
     int nb=0;

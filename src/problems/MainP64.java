@@ -1,6 +1,7 @@
 package problems;
 
 /**
+ * Solved 16.01.2011.
  * @author DAM
  */
 public class MainP64

@@ -1,5 +1,8 @@
 package problems;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Solved 16.01.2011.
  * @author DAM
@@ -13,13 +16,26 @@ public class MainP64
 
   private int evalN(int n)
   {
-    //List<Integer> la=new ArrayList<Integer>();
+    List<Integer> la=computeContinuedFraction(n);
+    return la.size()-1;
+  }
+  
+  /**
+   * Compute the items in the continued fraction of the
+   * square root of n.
+   * @param n Number to use.
+   * @return A list of numbers.
+   */
+  public static List<Integer> computeContinuedFraction(int n)
+  {
+    List<Integer> la=new ArrayList<Integer>();
     //List<Integer> lalpha=new ArrayList<Integer>();
     //List<Integer> lbeta=new ArrayList<Integer>();
     double root=Math.sqrt(n);
     int a=(int)(root);
+    la.add(Integer.valueOf(a));
     // Ignore squares
-    if (a*a==n) return 0;
+    if (a*a==n) return la;
     int alpha=a;
     int alpha0=alpha;
     int beta=1;
@@ -35,7 +51,7 @@ public class MainP64
       a=nextA;
       alpha=nextAlpha;
       beta=nextBeta;
-      //la.add(Integer.valueOf(a));
+      la.add(Integer.valueOf(a));
       //lalpha.add(Integer.valueOf(alpha));
       //lbeta.add(Integer.valueOf(beta));
       if ((nextAlpha==alpha0) && (nextBeta==beta0))
@@ -44,8 +60,8 @@ public class MainP64
       }
       cycleSize++;
     }
-    //System.out.println("n="+n+", cycle size="+cycleSize+", digits="+la);
-    return cycleSize;
+    //System.out.println("n="+n+", cycle size="+cycleSize+", nbDigits="+la.size()+", digits="+la);
+    return la;
   }
 
   private void doIt()

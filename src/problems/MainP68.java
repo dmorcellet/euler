@@ -76,7 +76,7 @@ public class MainP68
             String s=sb.toString();
             if (SOLUTION_SIZE==s.length())
             {
-              System.out.println("Got a solution ["+s+"] sum="+sum+" !");
+              //System.out.println("Got a solution ["+s+"] sum="+sum+" !");
               if ((_bestSolution==null) || (_bestSolution.compareTo(s)<0))
               {
                 _bestSolution=s;

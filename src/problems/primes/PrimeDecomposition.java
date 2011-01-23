@@ -53,20 +53,28 @@ public class PrimeDecomposition
 
   public List<Integer> decompose(int n)
   {
-    List<Integer> primeFactors=new ArrayList<Integer>();
-    while(true)
+    try
     {
-      int factor=get(n);
-      if (factor==0)
+      List<Integer> primeFactors=new ArrayList<Integer>();
+      while(true)
       {
-        primeFactors.add(Integer.valueOf(n));
-        break;
+        int factor=get(n);
+        if (factor==0)
+        {
+          primeFactors.add(Integer.valueOf(n));
+          break;
+        }
+        primeFactors.add(Integer.valueOf(factor));
+        n=n/factor;
       }
-      primeFactors.add(Integer.valueOf(factor));
-      n=n/factor;
+      Collections.sort(primeFactors);
+      return primeFactors;
     }
-    Collections.sort(primeFactors);
-    return primeFactors;
+    catch(Exception e)
+    {
+      System.out.println("Error for n="+n);
+    }
+    return null;
   }
 
   public List<Integer> factors(int n)

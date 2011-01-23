@@ -39,6 +39,12 @@ public class MainP71
     long now=System.currentTimeMillis();
     PrimeDecomposition dec=new PrimeDecomposition(DMAX+1);
     int N=2,D=5;
+    // Let N/D be the best approximation for 3/7 (N/D<3/7)
+    // Then any better candidate n/d shall give:
+    // N/D < n/d < 3/7
+    // Let start with N=2, D=5.
+    // For each d (starting at DMAX), find acceptable values for n (nmin<=n<=nmax) and
+    // check if d and n ae relatively primes. If they are, let D=d and N=n...
     for(int d=DMAX;d>=3;d--)
     {
       int nmin=(int)(((long)d*N)/D)+1;

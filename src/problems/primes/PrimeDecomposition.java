@@ -51,6 +51,11 @@ public class PrimeDecomposition
     _flags[row][column]=value;
   }
 
+  /**
+   * Decompose the given number <code>n</code> into its prime factors.
+   * @param n Number to decompose.
+   * @return An ordered list of prime factors (low values first, duplicates allowed).
+   */
   public List<Integer> decompose(int n)
   {
     try
@@ -77,6 +82,11 @@ public class PrimeDecomposition
     return null;
   }
 
+  /**
+   * Get the primes factors of the given number <code>n</code>.
+   * @param n Number to decompose.
+   * @return An ordered list of prime factors (low values first, no duplicates).
+   */
   public List<Integer> factors(int n)
   {
     HashSet<Integer> primeFactors=new HashSet<Integer>();
@@ -118,7 +128,7 @@ public class PrimeDecomposition
   private void fill()
   {
     set(0,0);
-    set(1,1);
+    set(1,0);
     int index=2;
     while (index<_maxInt)
     {

@@ -7,7 +7,7 @@ import problems.primes.PrimeDecomposition;
 
 /**
  * Solved 21.01.2011.
- * To be optimized (40 seconds!).
+ * To be optimized (40 seconds on laptop, 12s on desktop PC!).
  * @author DAM
  */
 public class MainP70

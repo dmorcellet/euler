@@ -1,8 +1,5 @@
 package problems;
 
-import java.math.BigInteger;
-import java.util.HashMap;
-
 /**
  * Solved 29.01.2011.
  * @author DAM
@@ -12,14 +9,14 @@ public class MainP78
   private static final int DIV=1000000;
   private static final int MAXP=100000;
   private static final int MAX_PENTA=1000;
-  private HashMap<Integer,BigInteger> _cacheP;
+  //private HashMap<Integer,BigInteger> _cacheP;
   private int[] _cachePMod;
 
   private int[] _penta;
 
   private MainP78()
   {
-    _cacheP=new HashMap<Integer,BigInteger>();
+    //_cacheP=new HashMap<Integer,BigInteger>();
     _cachePMod=new int[MAXP+1];
   }
 
@@ -37,6 +34,7 @@ public class MainP78
     return ret;
   }
 
+  /*
   private BigInteger getP(int n)
   {
     Integer intN=Integer.valueOf(n);
@@ -78,6 +76,7 @@ public class MainP78
     _cacheP.put(intN,ret);
     return ret;
   }
+  */
 
   private int getpMod(int n)
   {
@@ -120,7 +119,7 @@ public class MainP78
     int p;
     //BigInteger p;
     int goodI=0;
-    BigInteger d=BigInteger.valueOf(DIV);
+    //BigInteger d=BigInteger.valueOf(DIV);
     for(int i=1;i<=100000;i++)
     {
       //p=getP(i);

@@ -17,17 +17,12 @@ public class MainP18andP67
   private int _height;
   private int _maxWidth;
 
-  private MainP18andP67()
-  {
-    // Nothing to do !
-  }
-
-  private void loadTriangle()
+  private void loadTriangle(String name)
   {
     List<String> lines=new ArrayList<String>();
     try
     {
-      InputStream is=getClass().getResourceAsStream("/data/P67-triangle.txt");
+      InputStream is=getClass().getResourceAsStream("/data/"+name+".txt");
       BufferedReader r=new BufferedReader(new InputStreamReader(is));
       String line=null;
       while(true)
@@ -58,10 +53,14 @@ public class MainP18andP67
     _maxWidth=width;
   }
 
-  private void doIt()
+  /**
+   * Resolution of problems 18 and 67.
+   * @param name Data file to use.
+   */
+  public void doIt(String name)
   {
     long now=System.currentTimeMillis();
-    loadTriangle();
+    loadTriangle(name);
     int[] max=new int[_maxWidth];
     int[] tmp=new int[_maxWidth];
     for(int i=0;i<_maxWidth;i++)
@@ -70,9 +69,9 @@ public class MainP18andP67
     }
     for(int i=_height-1;i>=0;i--)
     {
-      System.out.print(i+1+":");
-      for(int k=1;k<=(i+1);k++) System.out.print(" "+max[k-1]);
-      System.out.println("");
+      //System.out.print(i+1+":");
+      //for(int k=1;k<=(i+1);k++) System.out.print(" "+max[k-1]);
+      //System.out.println("");
       for(int j=1;j<_maxWidth;j++)
       {
         if (j<=i)
@@ -90,15 +89,6 @@ public class MainP18andP67
     }
 
     long now2=System.currentTimeMillis();
-    System.out.println("result="+" ("+(now2-now)+"ms).");
-  }
-
-  /**
-   * @param args
-   */
-  public static void main(String[] args)
-  {
-    MainP18andP67 m=new MainP18andP67();
-    m.doIt();
+    System.out.println("result="+max[0]+" ("+(now2-now)+"ms).");
   }
 }

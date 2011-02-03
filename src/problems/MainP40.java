@@ -93,6 +93,7 @@ public class MainP40
     System.out.println("result="+value+" ("+(now2-now)+"ms).");
   }
 
+  /*
   private void doIt2()
   {
     long now=System.currentTimeMillis();
@@ -116,6 +117,7 @@ public class MainP40
     long now2=System.currentTimeMillis();
     System.out.println("result="+value+" ("+(now2-now)+"ms).");
   }
+  */
 
   /**
    * @param args
@@ -124,6 +126,6 @@ public class MainP40
   {
     MainP40 m=new MainP40();
     m.doIt();
-    m.doIt2();
+    //m.doIt2();
   }
 }

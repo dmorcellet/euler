@@ -24,19 +24,19 @@ public class MainP24
     List<Integer> numbers=new ArrayList<Integer>(10);
     for(int i=0;i<10;i++) numbers.add(Integer.valueOf(i));
     int index=999999;
+    long result=0;
     for(int i=0;i<10;i++)
     {
       int f=fact[9-i];
       int number=index/f;
       int digit=numbers.get(number).intValue();
       numbers.remove(number);
-      System.out.print(digit);
+      result=result*10+digit;
       index-=(number*f);
     }
-    System.out.println("");
       
     long now2=System.currentTimeMillis();
-    System.out.println("result="+" ("+(now2-now)+"ms).");
+    System.out.println("result="+result+" ("+(now2-now)+"ms).");
   }
 
   /**

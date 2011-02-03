@@ -42,7 +42,7 @@ public class MainP21
         if ((i!=j) && (d[i]==j) && (d[j]==i))
         {
           sum+=i;
-          System.out.println("i="+i+" is amicable with j="+j);
+          //System.out.println("i="+i+" is amicable with j="+j);
           break;
         }
       }

@@ -68,11 +68,11 @@ public class MainP35
         {
           for(int j=0;j<nbDigits;j++)
           {
-            System.out.print(rotations[j]);
-            System.out.print(' ');
+            //System.out.print(rotations[j]);
+            //System.out.print(' ');
             foundCircularPrimes.add(Integer.valueOf(rotations[j]));
           }
-          System.out.println("");
+          //System.out.println("");
         }
       }
     }

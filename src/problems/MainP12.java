@@ -31,9 +31,9 @@ public class MainP12
         tmp=tmp/PRIMES[i];
       }
     }
-    System.out.println("N="+n+":");
-    for(int i=0;i<NB_PRIMES;i++) System.out.print(" "+_decs[n][i]);
-    System.out.println("");
+    //System.out.println("N="+n+":");
+    //for(int i=0;i<NB_PRIMES;i++) System.out.print(" "+_decs[n][i]);
+    //System.out.println("");
   }
 
   private void computeDecompositions()
@@ -44,6 +44,7 @@ public class MainP12
     }
   }
 
+  /*
   private void displayDivisors(long n)
   {
     int nb=0;
@@ -60,6 +61,7 @@ public class MainP12
     }
     System.out.println(" ("+nb+")");
   }
+  */
 
   private int findNbDivisors(long n)
   {
@@ -111,8 +113,9 @@ public class MainP12
 
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     //for(int i=0;i<100;i++) System.out.println("fact("+i+")="+fact(i));
-    for(int i=2;i<=31;i++) displayDivisors(i);
+    //for(int i=2;i<=31;i++) displayDivisors(i);
     computeDecompositions();
     //long n=223092870;
     //displayDivisors(n);
@@ -129,15 +132,17 @@ public class MainP12
       int nb=findNbDivisors(tn);
       if (nb>nbMax)
       {
-        System.out.println("T(n)="+tn+", n="+n+", nb="+nb);
+        //System.out.println("T(n)="+tn+", n="+n+", nb="+nb);
         nbMax=nb;
       }
       if (nb>500)
       {
-        System.out.println("n="+tn+", nb="+nb);
+        //System.out.println("n="+tn+", nb="+nb);
         break;
       }
     }
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+tn+" ("+(now2-now)+"ms).");
   }
 
   /**

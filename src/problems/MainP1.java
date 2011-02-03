@@ -30,13 +30,13 @@ public class MainP1
     long now2=System.currentTimeMillis();
     System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }
-  */
 
   private int sumDivisibleBy(int max, int n)
   {
     int d=max/n;
     return n*(d*(d+1))/2;
   }
+  */
 
   /**
    * @param args

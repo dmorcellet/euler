@@ -48,7 +48,7 @@ public class MainP19
       {
         if ((year>=1901) && (index%7==6))
         {
-          System.out.println("Month="+month+", year="+year);
+          //System.out.println("Month="+month+", year="+year);
           nbSundays++;
         }
         index+=getDaysOfMonth(month,year);

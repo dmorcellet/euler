@@ -57,11 +57,11 @@ public class MainP44
             int pentaDiff=isPenta(pentaJ-pentaI);
             if (pentaDiff!=0)
             {
-              System.out.println("Got i="+i+", Pi="+pentaI+", j="+j+", Pj="+pentaJ+", somme="+pentaSomme+", Psomme="+(pentaI+pentaJ)+", diff="+pentaDiff+", Pdiff="+(pentaJ-pentaI));
+              //System.out.println("Got i="+i+", Pi="+pentaI+", j="+j+", Pj="+pentaJ+", somme="+pentaSomme+", Psomme="+(pentaI+pentaJ)+", diff="+pentaDiff+", Pdiff="+(pentaJ-pentaI));
               if (d<distance)
               {
                 distance=d;
-                System.out.println("Distance = "+d);
+                //System.out.println("Distance = "+d);
               }
             }
           }

@@ -21,6 +21,7 @@ public class MainP27
     final int maxB=1000;
     int maxPrimes=0;
     //int a=1,b=41;
+    int result=-1;
     for(int a=-maxA;a<=maxA;a++)
     {
       for(int b=-maxB;b<=maxB;b++)
@@ -39,12 +40,13 @@ public class MainP27
         if (n>maxPrimes)
         {
           maxPrimes=n;
-          System.out.println("A="+a+", B="+b+", nmax="+n+", product="+(a*b));
+          result=a*b;
+          //System.out.println("A="+a+", B="+b+", nmax="+n+", product="+result);
         }
       }
     }
     long now2=System.currentTimeMillis();
-    System.out.println("result="+" ("+(now2-now)+"ms).");
+    System.out.println("result="+result+" ("+(now2-now)+"ms).");
   }
 
   /**

@@ -71,7 +71,7 @@ public class MainP32
         }
       }
     }
-    System.out.println(products);
+    //System.out.println(products);
     //int nb=products.size();
     int sum=0;
     for(Integer product : products)

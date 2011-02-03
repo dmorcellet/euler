@@ -46,6 +46,7 @@ public class MainP10
 
   private void erathostenes()
   {
+    long now=System.currentTimeMillis();
     long sum=0;
     long product=1;
     int index=2;
@@ -57,12 +58,13 @@ public class MainP10
         sum+=index;
         product*=index;
         nbPrimes++;
-        System.out.println("Found prime #"+nbPrimes+" = "+index+", sum="+sum+", product="+product);
+        //System.out.println("Found prime #"+nbPrimes+" = "+index+", sum="+sum+", product="+product);
         setMultiples(index);
       }
       index++;
     }
-    System.out.println("Sum = "+sum);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }
 
   private void doIt()

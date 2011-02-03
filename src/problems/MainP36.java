@@ -92,7 +92,7 @@ public class MainP36
       if ((isPalindromicBase10(i)) && (isPalindromicBase2(i)))
       {
         sum+=i;
-        System.out.println("Found i="+i);
+        //System.out.println("Found i="+i);
       }
     }
     long now2=System.currentTimeMillis();

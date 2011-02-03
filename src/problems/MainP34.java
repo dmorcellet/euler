@@ -54,7 +54,7 @@ public class MainP34
     {
       if (check(i))
       {
-        System.out.println(i);
+        //System.out.println(i);
         total+=i;
       }
     }

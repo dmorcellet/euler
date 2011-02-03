@@ -44,12 +44,12 @@ public class MainP23
     {
       if (!reachable[i])
       {
-        System.out.print(' ');System.out.print(i);
+        //System.out.print(' ');System.out.print(i);
         sum+=i;
       }
     }
-    System.out.println(abundantNumbers);
-    System.out.println(abundantNumbers.size());
+    //System.out.println(abundantNumbers);
+    //System.out.println(abundantNumbers.size());
     long now2=System.currentTimeMillis();
     System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }

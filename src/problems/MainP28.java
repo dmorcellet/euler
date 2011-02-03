@@ -34,12 +34,12 @@ public class MainP28
       value+=2*n;
       value++;
       sum=diag1+diag2-1;
-      System.out.println("value="+value+", diag1="+diag1+", diag2="+diag2+", sum="+sum);
+      //System.out.println("value="+value+", diag1="+diag1+", diag2="+diag2+", sum="+sum);
     }
     //System.out.println("value="+value+", diag1="+diag1+", diag2="+diag2+", sum="+sum);
 
     long now2=System.currentTimeMillis();
-    System.out.println("result="+" ("+(now2-now)+"ms).");
+    System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }
 
   /**

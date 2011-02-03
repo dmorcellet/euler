@@ -61,7 +61,7 @@ public class MainP20
     {
       BigDecimal m=new BigDecimal(i);
       d=d.multiply(m);
-      System.out.println(i+"!="+d);
+      //System.out.println(i+"!="+d);
     }
     String digitsStr=d.toString();
     int sum=0;

@@ -79,7 +79,8 @@ public class MainP14
       }
     }
     long now2=System.currentTimeMillis();
-    System.out.println("start="+n+" => length="+maxLength+" ("+(now2-now)+"ms).");
+    //System.out.println("start="+n+" => length="+maxLength+" ("+(now2-now)+"ms).");
+    System.out.println("result="+n+" ("+(now2-now)+"ms).");
   }
 
   /**

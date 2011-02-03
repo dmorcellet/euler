@@ -110,6 +110,7 @@ public class MainP13
   
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     StringBuilder sb=new StringBuilder();
     int nbNumbers=NUMBERS.length;
     //System.out.println("Numbers: "+nbNumbers);
@@ -130,7 +131,9 @@ public class MainP13
     }
     //System.out.println(remainder);
     sb.insert(0,remainder);
-    System.out.println(sb);
+    long result=Long.parseLong(sb.toString().substring(0,10));
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+result+" ("+(now2-now)+"ms).");
   }
 
   /**

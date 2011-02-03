@@ -39,6 +39,7 @@ public class MainP11
 
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     int product=0;
     int xlength=GRID[0].length;
     int ylength=GRID.length;
@@ -69,7 +70,7 @@ public class MainP11
         if (p>product) product=p;
       }
     }
-    // diagonal 1
+    // diagonal 2
     for(int i=0;i<xlength;i++)
     {
       for(int j=0;j<ylength;j++)
@@ -78,7 +79,8 @@ public class MainP11
         if (p>product) product=p;
       }
     }
-    System.out.println("Product="+product);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+product+" ("+(now2-now)+"ms).");
   }
 
   /**

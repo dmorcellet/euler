@@ -85,13 +85,13 @@ public class MainP37
     {
       if ((e.isPrime(i)) && (testLeftToRight(e,i)) && (testRightToLeft(e,i)))
       {
-        System.out.println("Found i="+i);
+        //System.out.println("Found i="+i);
         sum+=i;
         nbFound++;
       }
       i++;
     }
-    System.out.println("Nb found="+nbFound);
+    //System.out.println("Nb found="+nbFound);
     long now2=System.currentTimeMillis();
     System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }

@@ -16,7 +16,7 @@ public class MainP33
     // Examine fraction a/b can be reduced to n/p
     if (a*p==b*n)
     {
-      System.out.println(a+"/"+b+" = "+n+"/"+p);
+      //System.out.println(a+"/"+b+" = "+n+"/"+p);
       return true;
     }
     return false;
@@ -48,7 +48,7 @@ public class MainP33
         }
       }
     }
-    System.out.println(a+"/"+b);
+    //System.out.println(a+"/"+b);
     int result=b/a;
     long now2=System.currentTimeMillis();
     System.out.println("result="+result+" ("+(now2-now)+"ms).");

@@ -37,7 +37,7 @@ public class MainP30
       }
       if (i==sum)
       {
-        System.out.println("i="+i+", sum="+sum);
+        //System.out.println("i="+i+", sum="+sum);
         totalSum+=sum;
       }
     }

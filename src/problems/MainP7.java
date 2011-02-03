@@ -44,7 +44,7 @@ public class MainP7
     }
   }
 
-  private void erathostenes()
+  private int erathostenes()
   {
     int nbPrimes=0;
     int index=2;
@@ -53,16 +53,20 @@ public class MainP7
       if (!get(index))
       {
         nbPrimes++;
-        System.out.println("Found prime #"+nbPrimes+" = "+index);
+        //System.out.println("Found prime #"+nbPrimes+" = "+index);
         setMultiples(index);
       }
       index++;
     }
+    return index;
   }
 
   private void doIt()
   {
-    erathostenes();
+    long now=System.currentTimeMillis();
+    int result=erathostenes();
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+result+" ("+(now2-now)+"ms).");
   }
 
   /**

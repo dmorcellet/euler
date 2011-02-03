@@ -8,6 +8,7 @@ public class MainP4
   private int _maxP=0;
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     for(int i=999;i>=100;i--)
     {
       for(int j=100;j<=999;j++)
@@ -18,12 +19,13 @@ public class MainP4
           if ((p>_maxP) && (isPalindromic(p)))
           {
             _maxP=p;
-            System.out.println("MaxP="+_maxP+" : "+i+"*"+j);
+            //System.out.println("MaxP="+_maxP+" : "+i+"*"+j);
           }
         }
       }
     }
-    System.out.println("MaxP="+_maxP);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+_maxP+" ("+(now2-now)+"ms).");
   }
 
   private int getNbDigits(int n)

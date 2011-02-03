@@ -7,6 +7,7 @@ public class MainP6
 {
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     int sumOfSquares=0;
     int sum=0;
     final int N=100;
@@ -16,7 +17,8 @@ public class MainP6
       sum+=i;
     }
     int diff=sum*sum-sumOfSquares;
-    System.out.println("diff="+diff);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+diff+" ("+(now2-now)+"ms).");
   }
 
   /**

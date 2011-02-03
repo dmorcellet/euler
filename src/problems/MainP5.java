@@ -7,6 +7,7 @@ public class MainP5
 {
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     int n=2;
     n*=3;
     n*=2;
@@ -19,7 +20,8 @@ public class MainP5
     n*=2;
     n*=17;
     n*=19;
-    System.out.println("n="+n);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+n+" ("+(now2-now)+"ms).");
   }
 
   /**

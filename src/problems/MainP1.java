@@ -6,8 +6,10 @@ package problems;
 public class MainP1
 {
   private static final int MAX=999;
+
   private void doIt1()
   {
+    long now=System.currentTimeMillis();
     int sum=0;
     for(int i=1;i<=MAX;i++)
     {
@@ -16,14 +18,19 @@ public class MainP1
         sum+=i;
       }
     }
-    System.out.println("Result="+sum);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }
 
+  /*
   private void doIt2()
   {
+    long now=System.currentTimeMillis();
     int sum=sumDivisibleBy(MAX,3)+sumDivisibleBy(MAX,5)-sumDivisibleBy(MAX,15);
-    System.out.println("Result="+sum);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+sum+" ("+(now2-now)+"ms).");
   }
+  */
 
   private int sumDivisibleBy(int max, int n)
   {
@@ -38,6 +45,6 @@ public class MainP1
   {
     MainP1 m=new MainP1();
     m.doIt1();
-    m.doIt2();
+    //m.doIt2();
   }
 }

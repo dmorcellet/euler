@@ -35,7 +35,7 @@ public class MainP85
           bestN=n;
           bestP=p;
           bestDiff=diff;
-          System.out.println("n="+n+", p="+p+", diff="+diff);
+          //System.out.println("n="+n+", p="+p+", diff="+diff);
         }
       }
     }

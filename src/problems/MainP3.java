@@ -9,7 +9,8 @@ public class MainP3
 
   private void doIt()
   {
-    System.out.println("N="+N);
+    long now=System.currentTimeMillis();
+    //System.out.println("N="+N);
     long n=N;
     long factor=2;
     long lastFactor=-1;
@@ -19,11 +20,13 @@ public class MainP3
       {
         lastFactor=factor;
         n=n/factor;
-        System.out.println("Factor : "+factor);
+        //System.out.println("Factor : "+factor);
       }
       factor++;
     }
-    System.out.println("Last factor="+lastFactor);
+    //System.out.println("Last factor="+lastFactor);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+lastFactor+" ("+(now2-now)+"ms).");
   }
 
   /**

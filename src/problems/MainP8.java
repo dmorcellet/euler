@@ -33,6 +33,7 @@ public class MainP8
 
   private void doIt()
   {
+    long now=System.currentTimeMillis();
     int length=N.length();
     int max=0;
     int p;
@@ -44,7 +45,8 @@ public class MainP8
         max=p;
       }
     }
-    System.out.println(max);
+    long now2=System.currentTimeMillis();
+    System.out.println("result="+max+" ("+(now2-now)+"ms).");
   }
 
   /**

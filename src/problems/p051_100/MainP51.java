@@ -95,8 +95,8 @@ public class MainP51
       {
         if (testCombinaison(e,nbDigits,prime,combinaison,false)!=-1)
         {
-          System.out.println("Got prime : "+prime+", with combinaison: "+combinaison);
-          result=testCombinaison(e,nbDigits,prime,combinaison,true);
+          //System.out.println("Got prime : "+prime+", with combinaison: "+combinaison);
+          result=testCombinaison(e,nbDigits,prime,combinaison,false);
           i=nbPrimes; // break for parent loop
           break;
         }

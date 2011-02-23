@@ -18,6 +18,7 @@ public class MainP50
     // Nothing to do !
   }
 
+  /*
   private void dumpPrimes(int expectedSum, int length, int indexOfFirtPrime, List<Integer> primes)
   {
     System.out.println("Length="+length);
@@ -30,6 +31,7 @@ public class MainP50
     }
     System.out.println(" ("+sum+"/"+expectedSum+")");
   }
+  */
 
   private void doIt()
   {
@@ -45,7 +47,7 @@ public class MainP50
     }
     int nbPrimes=primes.size();
     int indexOfFirstPrime=0;
-    int maxIndexOfFirstPrime=0;
+    //int maxIndexOfFirstPrime=0;
     int maxSum=0;
     int maxLength=1;
     while (indexOfFirstPrime<nbPrimes)
@@ -63,7 +65,7 @@ public class MainP50
         {
           if (length>maxLength)
           {
-            maxIndexOfFirstPrime=indexOfFirstPrime;
+            //maxIndexOfFirstPrime=indexOfFirstPrime;
             maxSum=sum;
             maxLength=length;
             //dumpPrimes(sum,maxLength,maxIndexOfFirstPrime,primes);
@@ -74,7 +76,7 @@ public class MainP50
       indexOfFirstPrime++;
     }
     long now2=System.currentTimeMillis();
-    dumpPrimes(maxSum,maxLength,maxIndexOfFirstPrime,primes);
+    //dumpPrimes(maxSum,maxLength,maxIndexOfFirstPrime,primes);
     System.out.println("result="+maxSum+" ("+(now2-now)+"ms).");
   }
 

@@ -1,6 +1,7 @@
 package utils;
 
 /**
+ * Custom basic big integer implementation.
  * @author DAM
  */
 public class BigInt
@@ -9,6 +10,10 @@ public class BigInt
   private int _nbDigits;
   private int[] _digits;
   
+  /**
+   * Copy constructor.
+   * @param toClone Source integer.
+   */
   public BigInt(BigInt toClone)
   {
     _maxDigits=toClone._maxDigits;
@@ -17,6 +22,10 @@ public class BigInt
     System.arraycopy(toClone._digits,0,_digits,0,_maxDigits);
   }
 
+  /**
+   * Constructor.
+   * @param maxDigits Maximum number of digits.
+   */
   public BigInt(int maxDigits)
   {
     _maxDigits=maxDigits;
@@ -24,12 +33,21 @@ public class BigInt
     _nbDigits=0;
   }
 
+  /**
+   * Constructor.
+   * @param maxDigits Maximum number of digits.
+   * @param value Value to set.
+   */
   public BigInt(int maxDigits, int value)
   {
     this(maxDigits);
     setValue(value);
   }
 
+  /**
+   * Set the value of this integer.
+   * @param value Value to set.
+   */
   public void setValue(int value)
   {
     for(int i=0;i<_maxDigits;i++)
@@ -46,17 +64,31 @@ public class BigInt
     _nbDigits=index;
   }
   
+  /**
+   * Get the number of digits in this integer.
+   * @return a positive number.
+   */
   public int getNbDigits()
   {
     return _nbDigits;
   }
 
+  /**
+   * Get the digit at the specified index.
+   * @param index Index to use (starting at 0).
+   * @return A digit (0-9).
+   */
   public int getDigit(int index)
   {
     if (index>=_maxDigits) return 0;
     return _digits[index];
   }
 
+  /**
+   * Set the value of a digit.
+   * @param index Index of the digit to set (starting at 0).
+   * @param value Digit to set.
+   */
   public void setDigit(int index, int value)
   {
     if (index>=_maxDigits) throw new IllegalArgumentException("Invalid index: "+index);
@@ -78,6 +110,10 @@ public class BigInt
     }
   }
 
+  /**
+   * Add a big integer to this one.
+   * @param value Big integer to add.
+   */
   public void add(BigInt value)
   {
     int nbDigitsOfValue=value.getNbDigits();
@@ -103,7 +139,7 @@ public class BigInt
     }
   }
 
-  public void shift(int n)
+  private void shift(int n)
   {
     for(int i=_nbDigits-1;i>=0;i--)
     {
@@ -147,6 +183,11 @@ public class BigInt
     }
   }
 
+  /**
+   * Multiply a big integer with this one.
+   * @param value Big integer to use.
+   * @return a new big integer.
+   */
   public BigInt multiply(BigInt value)
   {
     int nbDigitsOfValue=value.getNbDigits();
@@ -174,6 +215,10 @@ public class BigInt
     return sb.toString();
   }
   
+  /**
+   * Main method for tests.
+   * @param args Not used.
+   */
   public static void main(String[] args)
   {
     BigInt n1=new BigInt(100,12);

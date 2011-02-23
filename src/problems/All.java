@@ -8,6 +8,14 @@ import java.lang.reflect.Method;
  */
 public class All
 {
+  private static String intToString(int value)
+  {
+    String s=String.valueOf(value);
+    if (value<10) s="00"+s;
+    else if (value<100) s="0"+s;
+    return s;
+  }
+
   /**
    * @param args
    */
@@ -18,7 +26,9 @@ public class All
       Method m=null;
       try
       {
-        String className="problems.MainP"+i;
+        int min=1+50*((i-1)/50);
+        int max=min+49;
+        String className="problems.p"+intToString(min)+"_"+intToString(max)+".MainP"+i;
         Class<?> c=Class.forName(className);
         m=c.getMethod("main",String[].class);
       }

@@ -51,7 +51,7 @@ public class MainP99
     int lineNumber=-1;
     for(int i=0;i<nb;i++)
     {
-    	double tmp=values.get(i*2+1)*Math.log10(values.get(i*2));
+    	double tmp=values.get(i*2+1).doubleValue()*Math.log10(values.get(i*2).doubleValue());
     	if (tmp>max)
     	{
     		lineNumber=i+1;

@@ -85,7 +85,7 @@ public class MainP107
       // Find a vertex V in chosenVertex and another one U not in chosenVertex
       // so that the edge (V,U) is minimal.
       int minWeight=Integer.MAX_VALUE;
-      int chosenV=-1,chosenU=-1;
+      int /*chosenV=-1,*/chosenU=-1;
       for(int v=0;v<nbVertex;v++)
       {
         if (chosenVertex[v])
@@ -97,7 +97,7 @@ public class MainP107
               int w=m[u][v];
               if ((w!=-1) && (w<minWeight))
               {
-                chosenV=v;
+                //chosenV=v;
                 chosenU=u;
                 minWeight=w;
               }

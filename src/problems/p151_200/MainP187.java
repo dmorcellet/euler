@@ -6,12 +6,12 @@ import problems.primes.ErathostenesSieve;
  * Solved 03.04.2011.
  * @author DAM
  */
-public class MainP188
+public class MainP187
 {
   private static final int MAX=100000000;
   private static final int SQRT_MAX=(int)Math.sqrt(MAX)+1;
 
-  private MainP188()
+  private MainP187()
   {
     // Nothing to do !
   }
@@ -48,7 +48,7 @@ public class MainP188
    */
   public static void main(String[] args)
   {
-    MainP188 m=new MainP188();
+    MainP187 m=new MainP187();
     m.doIt();
   }
 }

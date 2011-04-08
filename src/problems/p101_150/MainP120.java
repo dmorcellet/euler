@@ -1,6 +1,7 @@
 package problems.p101_150;
 
 /**
+ * Solved 08.04.2011.
  * @author DAM
  */
 public class MainP120

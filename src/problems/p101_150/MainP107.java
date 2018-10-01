@@ -78,7 +78,7 @@ public class MainP107
       }
     }
     int totalWeight=0;
-    int nbChosenVertex=1;
+    //int nbChosenVertex=1;
     for(int i=1;i<nbVertex;i++)
     {
       // Choose next vertex
@@ -106,7 +106,7 @@ public class MainP107
         }
       }
       chosenVertex[chosenU]=true;
-      nbChosenVertex++;
+      //nbChosenVertex++;
       //System.out.println("Chosen U="+chosenU+", chosenV="+chosenV+", minWeight="+minWeight);
       totalWeight+=minWeight;
     }

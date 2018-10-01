@@ -37,7 +37,7 @@ public class MainP119
   private void doIt()
   {
     long now=System.currentTimeMillis();
-    int nb=0;
+    //int nb=0;
     List<Long> goods=new ArrayList<Long>();
     for(int i=2;i<=100;i++)
     {
@@ -47,7 +47,7 @@ public class MainP119
         if (test(i,n))
         {
           goods.add(Long.valueOf(n));
-          nb++;
+          //nb++;
         }
         n*=i;
       }

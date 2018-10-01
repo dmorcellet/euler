@@ -40,7 +40,7 @@ public class MainP64
     int alpha0=alpha;
     int beta=1;
     int beta0=beta;
-    int cycleSize=1;
+    //int cycleSize=1;
     while(true)
     {
       // compute next value for a,alpha,beta
@@ -58,7 +58,7 @@ public class MainP64
       {
         break;
       }
-      cycleSize++;
+      //cycleSize++;
     }
     //System.out.println("n="+n+", cycle size="+cycleSize+", nbDigits="+la.size()+", digits="+la);
     return la;

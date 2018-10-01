@@ -1,7 +1,8 @@
 package problems.primes;
 
 /**
- * @author dm
+ * Test if a number is prime or not, using the square root method.
+ * @author DAM
  */
 public class SqrtPrimeTester implements PrimeTester
 {

@@ -61,7 +61,7 @@ public class MainP49
       }
     }
     int size=primes.size();
-    int nb=0;
+    //int nb=0;
     long result=0;
     for(int i=0;i<size-2;i++)
     {
@@ -81,7 +81,7 @@ public class MainP49
               break;
             }
           }
-          nb++;
+          //nb++;
         }
       }
     }

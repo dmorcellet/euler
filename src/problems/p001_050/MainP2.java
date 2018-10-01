@@ -19,7 +19,7 @@ public class MainP2
     int n1=1;
     int n2=2;
     int tmp;
-    int iter=0;
+    //int iter=0;
     while (n1<MAX)
     {
       if (n2%2==0)
@@ -31,7 +31,7 @@ public class MainP2
       n2=nextFib(n1,n2);
       //System.out.println("Got: "+n2);
       n1=tmp;
-      iter++;
+      //iter++;
     }
     //System.out.println("Iter="+iter+", n1="+n1);
     long now2=System.currentTimeMillis();

@@ -50,7 +50,7 @@ public class MainP125
     final int MAX_N=10000;
     int[] squares=computeSquares(MAX_N);
     //System.out.println(Arrays.toString(squares));
-    int nbSoluces=0;
+    //int nbSoluces=0;
     for(int start=1;start<=MAX_N;start++)
     {
       int sum=squares[start];
@@ -64,7 +64,7 @@ public class MainP125
         {
           //System.out.println("OK : "+sum+ ", start="+start+", index="+index);
           goods.add(Integer.valueOf(sum));
-          nbSoluces++;
+          //nbSoluces++;
         }
         index++;
       }

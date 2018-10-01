@@ -20,9 +20,9 @@ public class MainP54
   private CardsComparator _cc;
   private CardValueComparator _cvc;
   private int _win1;
-  private int _win2;
-  private int _tie;
-  
+  //private int _win2;
+  //private int _tie;
+
   private MainP54()
   {
     _values=new ArrayList<String>();
@@ -76,13 +76,13 @@ public class MainP54
     int nb4=0;
     int nb3=0;
     int nb2=0;
-    int nb1=0;
+    //int nb1=0;
     for(int i=0;i<13;i++)
     {
       if (nbV[i]==4) nb4++;
       else if (nbV[i]==3) nb3++;
       else if (nbV[i]==2) nb2++;
-      else nb1++;
+      //else nb1++;
     }
     if (nb4==1) return 7*1000; // Four a of Kind
     if ((nb3==1) && (nb2==1)) return 6*1000; // Full House
@@ -170,12 +170,14 @@ public class MainP54
     int r1=rankHand(hand1);
     int r2=rankHand(hand2);
     if (r1>r2) _win1++;
+    /*
     else if (r1<r2) _win2++;
     else
     {
       _tie++;
       System.out.println(r1+" - "+hand1+" / "+hand2);
     }
+    */
   }
 
   private List<String> loadCards()

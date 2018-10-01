@@ -48,16 +48,16 @@ public class MainP10
   {
     long now=System.currentTimeMillis();
     long sum=0;
-    long product=1;
+    //long product=1;
     int index=2;
-    int nbPrimes=0;
+    //int nbPrimes=0;
     while (index<MAX_PRIME)
     {
       if (!get(index))
       {
         sum+=index;
-        product*=index;
-        nbPrimes++;
+        //product*=index;
+        //nbPrimes++;
         //System.out.println("Found prime #"+nbPrimes+" = "+index+", sum="+sum+", product="+product);
         setMultiples(index);
       }

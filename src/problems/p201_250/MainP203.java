@@ -76,14 +76,14 @@ public class MainP203
     //System.out.println(primes.length);
     long[] squares=new long[primes.length];
     for(int i=0;i<primes.length;i++) squares[i]=primes[i]*primes[i];
-    int nbSquareFree=0;
+    //int nbSquareFree=0;
     long sum=0;
     for(Long value : values)
     {
       if (isSquareFree(value.longValue(),squares))
       {
         sum+=value.longValue();
-        nbSquareFree++;
+        //nbSquareFree++;
       }
     }
     long now2=System.currentTimeMillis();
